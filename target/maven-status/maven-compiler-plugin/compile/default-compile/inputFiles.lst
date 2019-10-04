@@ -1,0 +1,13 @@
+/home/lokeshsharma/Documents/workspace-spring-tool-suite-4-4.2.2.RELEASE/library/src/main/java/com/startup/library/LibraryApplication.java
+/home/lokeshsharma/Documents/workspace-spring-tool-suite-4-4.2.2.RELEASE/library/src/main/java/com/startup/library/config/SwaggerConfig.java
+/home/lokeshsharma/Documents/workspace-spring-tool-suite-4-4.2.2.RELEASE/library/src/main/java/com/startup/library/repository/BookRepository.java
+/home/lokeshsharma/Documents/workspace-spring-tool-suite-4-4.2.2.RELEASE/library/src/main/java/com/startup/library/domain/Reader.java
+/home/lokeshsharma/Documents/workspace-spring-tool-suite-4-4.2.2.RELEASE/library/src/main/java/com/startup/library/domain/BooksIsue.java
+/home/lokeshsharma/Documents/workspace-spring-tool-suite-4-4.2.2.RELEASE/library/src/main/java/com/startup/library/service/BookService.java
+/home/lokeshsharma/Documents/workspace-spring-tool-suite-4-4.2.2.RELEASE/library/src/main/java/com/startup/library/repository/ReaderRepository.java
+/home/lokeshsharma/Documents/workspace-spring-tool-suite-4-4.2.2.RELEASE/library/src/main/java/com/startup/library/repository/CategoryRepository.java
+/home/lokeshsharma/Documents/workspace-spring-tool-suite-4-4.2.2.RELEASE/library/src/main/java/com/startup/library/controller/BookController.java
+/home/lokeshsharma/Documents/workspace-spring-tool-suite-4-4.2.2.RELEASE/library/src/main/java/com/startup/library/domain/Category.java
+/home/lokeshsharma/Documents/workspace-spring-tool-suite-4-4.2.2.RELEASE/library/src/main/java/com/startup/library/domain/Book.java
+/home/lokeshsharma/Documents/workspace-spring-tool-suite-4-4.2.2.RELEASE/library/src/main/java/com/startup/library/dto/IsueDTO.java
+/home/lokeshsharma/Documents/workspace-spring-tool-suite-4-4.2.2.RELEASE/library/src/main/java/com/startup/library/dto/BookDTO.java

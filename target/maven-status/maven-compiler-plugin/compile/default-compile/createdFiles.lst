@@ -1,0 +1,13 @@
+com/startup/library/domain/Book.class
+com/startup/library/repository/BookRepository.class
+com/startup/library/config/SwaggerConfig.class
+com/startup/library/domain/Reader.class
+com/startup/library/repository/CategoryRepository.class
+com/startup/library/LibraryApplication.class
+com/startup/library/service/BookService.class
+com/startup/library/dto/IsueDTO.class
+com/startup/library/domain/BooksIsue.class
+com/startup/library/controller/BookController.class
+com/startup/library/domain/Category.class
+com/startup/library/dto/BookDTO.class
+com/startup/library/repository/ReaderRepository.class
