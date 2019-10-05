@@ -18,19 +18,18 @@ public class BookService {
     @Autowired
     BookRepository bookRepo;
 
-    public String addBook(BookDTO bookDTO){
-        Book bookDetail = bookRepo.findByBookName(bookDTO.getBookName());
-        if (Objects.nonNull(bookDetail) && bookDetail
-                .getBookName().equalsIgnoreCase(bookDTO.getBookName())){
-            bookDetail.setTotalBooks(bookDetail.getTotalBooks()+1);
+    public String addBook(BookDTO bookDTO) {
+        Book bookDetail = bookRepo.findByBookNameAndByWriterName(bookDTO.getBookName(), bookDTO.getWriterName());
+        if (Objects.nonNull(bookDetail)) {
+            bookDetail.setTotalBooks(bookDetail.getTotalBooks() + 1);
             bookDetail.setPrice(bookDTO.getPrice());
-            Category category2 = bookDetail.getCategory();
-            category2.setNoOfbooks(category2.getNoOfbooks()+1);
-            categoryRep.save(category2);
-            bookDetail.setCategory(category2);
+            Category category = bookDetail.getCategory();
+            category.setNoOfbooks(category.getNoOfbooks() + 1);
+            categoryRep.save(category);
+            bookDetail.setCategory(category);
             bookRepo.save(bookDetail);
             return bookDTO.toString();
-        }else {
+        } else {
             Book book = new Book();
             book.setBookName(bookDTO.getBookName());
             book.setWriterName(bookDTO.getWriterName());
@@ -47,14 +46,19 @@ public class BookService {
                 book.setCategory(category);
             }
             book.setPrice(bookDTO.getPrice());
-            book.setTotalBooks(bookRepo.countByBookName(bookDTO.getBookName()) + 1);
+            book.setTotalBooks(bookRepo.countByBookNameAndByWriterName(bookDTO.getBookName(), bookDTO.getWriterName()) + 1);
             bookRepo.save(book);
         }
         return bookDTO.toString();
     }
 
-    public List<Book> getBookDetails(){
+    public List<Book> getBookDetails() {
         List<Book> bookList = bookRepo.findAll();
         return bookList;
+    }
+
+    public Book getBookDetailsByBookName(String bookName, String WriterName) {
+        Book book = bookRepo.findByBookNameAndByWriterName(bookName, WriterName);
+        return book;
     }
 }

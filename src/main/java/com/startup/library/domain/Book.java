@@ -11,7 +11,7 @@ public class Book {
     private String bookName;
     private String writerName;
     @ManyToOne
-    @JoinColumn(name = "category_id")
+    @JoinColumn(name = "category_id",referencedColumnName = "id")
     private Category category;
     private boolean isAvailable = true;
     private Long totalBooks=0l;

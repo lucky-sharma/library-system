@@ -1,12 +1,6 @@
 package com.startup.library.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.startup.library.domain.Category;
-import lombok.Builder;
-
-import javax.persistence.Column;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 
 public class BookDTO {
     @NotEmpty
@@ -51,7 +45,7 @@ public class BookDTO {
     }
 
     @Override
-    public String toString(){
-        return bookName+"\n"+writerName+"\n"+category+"\n"+price;
+    public String toString() {
+        return bookName + "\n" + writerName + "\n" + category + "\n" + price;
     }
 }
