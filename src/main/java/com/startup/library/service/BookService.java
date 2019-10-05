@@ -7,10 +7,8 @@ import com.startup.library.repository.BookRepository;
 import com.startup.library.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 
 @Service

@@ -21,7 +21,7 @@ public class BookController {
         if (Objects.nonNull(bookDTO1)) {
             return new ResponseEntity<Object>(bookDTO1, HttpStatus.OK);
         }
-        return new ResponseEntity<Object>(null,HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<Object>(null,HttpStatus.NOT_FOUND);
     }
 
     @RequestMapping(value = "/book/list", method = RequestMethod.GET)
@@ -29,7 +29,7 @@ public class BookController {
         List<Book> bookList = bookService.getBookDetails();
         if (Objects.nonNull(bookList))
         return new ResponseEntity<Object>(bookList,HttpStatus.OK);
-        return new ResponseEntity<Object>(null,HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<Object>(null,HttpStatus.NOT_FOUND);
     }
 
 }
