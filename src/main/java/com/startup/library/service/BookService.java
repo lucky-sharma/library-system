@@ -7,6 +7,7 @@ import com.startup.library.repository.BookRepository;
 import com.startup.library.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Objects;
@@ -18,6 +19,7 @@ public class BookService {
     @Autowired
     BookRepository bookRepo;
 
+    @Transactional
     public String addBook(BookDTO bookDTO) {
         Book bookDetail = bookRepo.findByBookNameAndByWriterName(bookDTO.getBookName(), bookDTO.getWriterName());
         if (Objects.nonNull(bookDetail)) {
@@ -46,7 +48,7 @@ public class BookService {
                 book.setCategory(category);
             }
             book.setPrice(bookDTO.getPrice());
-            book.setTotalBooks(bookRepo.countByBookNameAndByWriterName(bookDTO.getBookName(), bookDTO.getWriterName()) + 1);
+            book.setTotalBooks(book.getTotalBooks() + 1);
             bookRepo.save(book);
         }
         return bookDTO.toString();
